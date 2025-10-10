@@ -19,6 +19,7 @@ class DatabaseSeeder extends Seeder
             'name' => 'Admin',
             'email' => 'admin@email.com',
             'password' => bcrypt('12345678'), // It's recommended to hash passwords
+            'role' => 'admin', // Add the role field (e.g., 'admin', 'teacher', 'student')
         ]);
     }
 }
