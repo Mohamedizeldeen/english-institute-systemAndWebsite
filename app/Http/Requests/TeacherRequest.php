@@ -22,7 +22,11 @@ class TeacherRequest extends FormRequest
     public function rules(): array
     {
         return [
-            //
+            'user_id' => 'required|integer',
+            'qualification' => 'nullable|string|max:255',
+            'years_of_experience' => 'nullable|integer|min:0',
+            'bio' => 'nullable|string',
+            'image' => 'nullable|image|max:2048',
         ];
     }
 }

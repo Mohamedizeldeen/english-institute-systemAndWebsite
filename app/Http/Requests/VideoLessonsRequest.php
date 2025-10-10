@@ -22,7 +22,14 @@ class VideoLessonsRequest extends FormRequest
     public function rules(): array
     {
         return [
-            //
+            'course_id' => 'required|integer|exists:courses,id',
+            'title' => 'required|string|max:255',
+            'description' => 'nullable|string',
+            'video_url' => 'required|url',
+            'duration' => 'nullable|integer|min:0',
+            'level_id' => 'nullable|integer|exists:levels,id',
+            'order_index' => 'nullable|integer|min:0',
+            'thumbnail_url' => 'nullable|url',
         ];
     }
 }

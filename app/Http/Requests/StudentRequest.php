@@ -22,7 +22,10 @@ class StudentRequest extends FormRequest
     public function rules(): array
     {
         return [
-            //
+            'user_id' => 'required|integer',
+            'phone_number' => 'required|string|max:15',
+            'address' => 'nullable|string|max:255',
+            'photo' => 'nullable|image|max:2048',
         ];
     }
 }

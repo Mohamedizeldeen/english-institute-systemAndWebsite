@@ -22,7 +22,11 @@ class EnrollmentRequest extends FormRequest
     public function rules(): array
     {
         return [
-            //
+            'student_id' => 'required|integer',
+            'course_id' => 'required|integer',
+            'enrollment_date' => 'required|date',
+            'status' => 'nullable|string|max:50',
+            'expiration_date' => 'required|date|after_or_equal:enrollment_date',
         ];
     }
 }

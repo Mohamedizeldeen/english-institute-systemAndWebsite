@@ -22,7 +22,12 @@ class PaymentRequest extends FormRequest
     public function rules(): array
     {
         return [
-            //
+            'student_id' => 'required|integer',
+            'course_id' => 'required|integer',
+            'payment_method' => 'required|string|max:50',
+            'status' => 'nullable|string|max:50',
+            'payment_date' => 'required|date',
+            'amount' => 'required|numeric|min:0',
         ];
     }
 }

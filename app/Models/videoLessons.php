@@ -16,10 +16,15 @@ class videoLessons extends Model
         'duration',
         'thumbnail_url',
         'order_index',
+        'level_id',
     ];
 
     public function course()
     {
         return $this->belongsTo(Course::class);
+    }
+    public function level()
+    {
+        return $this->belongsTo(Level::class);
     }
 }
