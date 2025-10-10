@@ -47,4 +47,15 @@ class RegisteredUserController extends Controller
 
         return redirect(route('dashboard', absolute: false));
     }
+
+    public function index(): View
+    {
+        $users = User::all();
+        return view('users.index', compact('users'));
+    }
+
+    public function editUser(User $user): View
+    {
+        return view('users.show', compact('user'));
+    }
 }
