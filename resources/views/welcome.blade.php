@@ -1,4 +1,3 @@
-// ...existing code...
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
@@ -312,7 +311,7 @@
                             </div>
                         </div>
                         <div class="text-right">
-                            <div class="text-xl font-bold">IRR 1,500,000</div>
+                            <div class="text-xl font-bold">Rial 1,500,000</div>
                             <div class="text-xs text-slate-500 dark:text-slate-400">one-time</div>
                         </div>
                     </div>
@@ -338,7 +337,7 @@
                             </div>
                         </div>
                         <div class="text-right">
-                            <div class="text-xl font-bold">IRR 2,000,000</div>
+                            <div class="text-xl font-bold">Rial 2,000,000</div>
                             <div class="text-xs text-slate-500 dark:text-slate-400">one-time</div>
                         </div>
                     </div>
@@ -364,7 +363,7 @@
                             </div>
                         </div>
                         <div class="text-right">
-                            <div class="text-xl font-bold">IRR 1,800,000</div>
+                            <div class="text-xl font-bold">Rial 1,800,000</div>
                             <div class="text-xs text-slate-500 dark:text-slate-400">one-time</div>
                         </div>
                     </div>

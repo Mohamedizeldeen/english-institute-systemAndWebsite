@@ -13,6 +13,13 @@ return new class extends Migration
     {
         Schema::create('video-lessons', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('course_id')->constrained('courses')->onDelete('cascade');
+            $table->string('title');
+            $table->text('description')->nullable();
+            $table->string('video_url');
+            $table->string('duration')->nullable();
+            $table->string('thumbnail_url')->nullable();
+            $table->integer('order_index')->default(0);
             $table->timestamps();
         });
     }
